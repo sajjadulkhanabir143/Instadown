@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Media Downloader</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 16px;
+        }
+        .card {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        h2 { margin-top: 0; color: #38bdf8; }
+        p { color: #94a3b8; font-size: 0.95rem; }
+        input[type="url"] {
+            width: 100%;
+            padding: 12px;
+            margin: 16px 0;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            background: #0f172a;
+            color: #fff;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #0284c7;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        button:hover { background: #0369a1; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Instagram Downloader</h2>
+        <p>পাবলিক Instagram পোস্ট বা রিলের লিংক নিচে পেস্ট করুন</p>
+        <form action="/api/download.php" method="GET">
+            <input type="url" name="url" placeholder="https://www.instagram.com/p/..." required>
+            <button type="submit">Download Media</button>
+        </form>
+    </div>
+</body>
+</html>
